@@ -25,10 +25,10 @@ disqus_shortname: myshortname
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary: 3B5D3A         # Forest green
-  primary-rgb: "59,93,58"
-  secondary: C2B280       # Khaki / desert tan
-  secondary-dark: 8B7B5C  # Olive brown
+  primary: C1E1C1         # 🌿 Light Sage Green
+  primary-rgb: "193,225,193"
+  secondary: F8BBD0       # 💖 Light Pink (pastel hot pink)
+  secondary-dark: AEC6CF  # 💙 Baby Blue / muted teal
 
 # Footer settings
 footer:

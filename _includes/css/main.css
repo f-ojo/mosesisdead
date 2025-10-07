@@ -482,3 +482,30 @@ footer .footer-below {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
 }
+
+/* --------------------------------------------- */
+/* Earthy color palette link and section styling */
+/* --------------------------------------------- */
+
+/* Paragraph links for earthy palette */
+p a {
+  color: #3B5D3A; /* forest green */
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+p a:hover,
+p a:focus {
+  color: #8B7B5C; /* olive hover tone */
+  text-decoration: none;
+}
+
+/* For dark sections (white text) */
+section.success p a {
+  color: #C2B280; /* khaki for contrast */
+  text-decoration: underline;
+}
+
+section.success p a:hover {
+  color: #fff;
+}

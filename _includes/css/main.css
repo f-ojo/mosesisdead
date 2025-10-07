@@ -484,50 +484,23 @@ footer .footer-below {
 }
 
 /* --------------------------------------------- */
-/* Earthy color palette link and section styling */
+/* link and section styling */
 /* --------------------------------------------- */
 
-/* Paragraph links for earthy palette */
-p a {
-  color: #3B5D3A; /* forest green */
-  text-decoration: underline;
+/* ----------------------------- */
+/* Pastel paragraph link styling */
+/* ----------------------------- */
+
+/* Only affect links inside paragraphs, NOT buttons */
+p a:not(.btn):not(.btn-outline) {
+  color: #AEC6CF; /* baby blue */
+  text-decoration: none; /* no underline by default */
+  position: relative;
   transition: color 0.3s ease;
 }
 
-p a:hover,
-p a:focus {
-  color: #8B7B5C; /* olive hover tone */
-  text-decoration: none;
-}
-
-/* For dark sections (white text) */
-section.success p a {
-  color: #C2B280; /* khaki for contrast */
-  text-decoration: underline;
-}
-
-section.success p a:hover {
-  color: #fff;
-}
-
-/* Fix and style links inside dark 'success' sections */
-section.success a {
-  color: #C2B280 !important;            /* khaki on forest green background */
-  text-decoration: underline;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-section.success a:hover,
-section.success a:focus {
-  color: #ffffff !important;            /* white on hover */
-  text-decoration: none;                /* cleaner hover effect */
-}
-
-/* Optional: add subtle underline animation for fancy look */
-section.success a {
-  position: relative;
-}
-section.success a::after {
+/* Subtle animated underline on hover */
+p a:not(.btn):not(.btn-outline)::after {
   content: "";
   position: absolute;
   left: 0;
@@ -539,7 +512,38 @@ section.success a::after {
   transform-origin: right;
   transition: transform 0.3s ease;
 }
-section.success a:hover::after {
+
+/* Hover: color shift + underline grow */
+p a:not(.btn):not(.btn-outline):hover,
+p a:not(.btn):not(.btn-outline):focus {
+  color: #F8BBD0; /* light pink on hover */
+}
+
+p a:not(.btn):not(.btn-outline):hover::after {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+/* ----------------------------- */
+/* "Success" section adjustments */
+/* ----------------------------- */
+section.success {
+  background-color: #C1E1C1 !important; /* pastel sage */
+  color: #333;
+}
+
+section.success p a:not(.btn):not(.btn-outline) {
+  color: #A682A0 !important; /* lilac for readability */
+}
+
+section.success p a:not(.btn):not(.btn-outline):hover {
+  color: #333 !important; /* darker hover */
+}
+
+/* ----------------------------- */
+/* Buttons remain untouched */
+/* ----------------------------- */
+.btn,
+.btn-outline {
+  text-decoration: none !important;
 }
